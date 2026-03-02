@@ -27,7 +27,7 @@ const PROJECTS = [
         image: '/images/LVFusebox.png',
         link: 'https://docs.google.com/presentation/d/12r0oW-2p84yeybX-I16Z8T5x9q6n6dF1/edit?usp=sharing&ouid=106727289569614480572&rtpof=true&sd=true',
         detailsLinks: [
-            { label: 'Project Documentation', url: 'https://drive.google.com/drive/folders/1oqYUIUB7IuijL0Q0dVpxbCQGdLXXse2r?usp=sharing' }
+            { label: 'Project Documentation', url: 'https://drive.google.com/drive/folders/1oqYUIUB7IuijL0Q0dVpxbCQGdLXXse2r?usp=drive_link' }
         ],
         tagColor: 'var(--pastel-rose)',
         tagText: '#B05070',
