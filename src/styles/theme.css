@@ -1,6 +1,6 @@
 :root,
 html[data-theme="light"] {
-    /* Backgrounds - Cream tones */
+    /* Backgrounds - Cream tones (Restored) */
     --bg: #FAF7F2;
     /* Warm Linen */
     --bg-secondary: #F5F0E8;
@@ -10,78 +10,103 @@ html[data-theme="light"] {
 
     /* Text */
     --text-primary: #26231E;
-    --text-secondary: #78726C;
-    --text-tertiary: #A89F98;
+    /* Deep Earth */
+    --text-secondary: #5C5753;
+    /* Muted Bark */
+    --text-tertiary: #948F89;
+    /* Soft Sand */
 
-    /* Accent — warm rose-violet */
-    --accent: #B48AF5;
-    --accent-hover: #9668E8;
-    --accent-soft: rgba(180, 138, 245, 0.12);
+    /* Accent — Cool Professional Blue (Kept) */
+    --accent: #2563EB;
+    /* Blue 600 */
+    --accent-hover: #1D4ED8;
+    /* Blue 700 */
+    --accent-soft: rgba(37, 99, 235, 0.1);
 
-    /* Pastels — light mode: soft & warm */
-    --pastel-rose: #FDC5C5;
-    --pastel-sky: #BAE3FD;
-    --pastel-mint: #B8F4D4;
-    --pastel-peach: #FDDAB0;
-    --pastel-lilac: #DDD6FE;
-    --pastel-butter: #FEF3C7;
+    /* Pastels — light mode: crisp & cool (Refined for Cream) */
+    --pastel-rose: #E0F2FE;
+    /* Ice Blue */
+    --pastel-sky: #DBEAFE;
+    /* Light Indigo */
+    --pastel-mint: #D1FAE5;
+    /* Cool Mint */
+    --pastel-peach: #F5F0E8;
+    /* Linen */
+    --pastel-lilac: #E0E7FF;
+    /* Soft Indigo */
+    --pastel-butter: #FAF7F2;
+    /* Frost Cream */
 
     /* Glass surfaces */
-    --glass-bg: rgba(255, 252, 248, 0.7);
-    --glass-border: rgba(180, 138, 245, 0.18);
+    --glass-bg: rgba(250, 247, 242, 0.8);
+    --glass-border: rgba(37, 99, 235, 0.1);
 
     /* Borders */
     --border: #E8E1DA;
     --border-hover: #D4CBCA;
 
     /* Gradient */
-    --gradient-hero: linear-gradient(135deg, var(--pastel-lilac) 0%, var(--pastel-rose) 50%, var(--pastel-peach) 100%);
-    --gradient-accent: linear-gradient(135deg, #B48AF5, #F472B6);
+    --gradient-hero: linear-gradient(135deg, #E0E7FF 0%, #DBEAFE 50%, #E0F2FE 100%);
+    --gradient-accent: linear-gradient(135deg, #2563EB, #3B82F6);
 
     /* Sparkle */
-    --sparkle-color: #B48AF5;
+    --sparkle-color: #3B82F6;
 
-    --shadow-color: 240 15% 55%;
+    --shadow-color: 240 10% 20%;
 }
 
 html[data-theme="dark"] {
-    /* Backgrounds */
-    --bg: #17161F;
-    --bg-secondary: #201F2C;
-    --bg-tertiary: #28273A;
+    /* Backgrounds - Midnight Slate */
+    --bg: #020617;
+    /* Midnight */
+    --bg-secondary: #0F172A;
+    /* Slate 900 */
+    --bg-tertiary: #1E293B;
+    /* Slate 800 */
 
     /* Text */
-    --text-primary: #F0EEF8;
-    --text-secondary: #9B96AD;
-    --text-tertiary: #6B6480;
+    --text-primary: #F8FAFC;
+    /* Slate 50 */
+    --text-secondary: #94A3B8;
+    /* Slate 400 */
+    --text-tertiary: #64748B;
+    /* Slate 500 */
 
     /* Accent */
-    --accent: #C9ADFD;
-    --accent-hover: #B48AF5;
-    --accent-soft: rgba(201, 173, 253, 0.12);
+    --accent: #60A5FA;
+    /* Blue 400 */
+    --accent-hover: #3B82F6;
+    /* Blue 500 */
+    --accent-soft: rgba(96, 165, 250, 0.1);
 
-    /* Pastels — dark mode: deep & muted */
-    --pastel-rose: #4A2535;
-    --pastel-sky: #1B364D;
-    --pastel-mint: #17382A;
-    --pastel-peach: #3D2A1A;
-    --pastel-lilac: #2C2647;
-    --pastel-butter: #332B12;
+    /* Pastels — dark mode: deep & arctic */
+    --pastel-rose: #0C4A6E;
+    /* Deep Sea */
+    --pastel-sky: #1E3A8A;
+    /* Navy */
+    --pastel-mint: #064E3B;
+    /* Emerald Night */
+    --pastel-peach: #0F172A;
+    /* Midnight */
+    --pastel-lilac: #312E81;
+    /* Indigo Night */
+    --pastel-butter: #1E293B;
+    /* Slate */
 
     /* Glass surfaces */
-    --glass-bg: rgba(32, 31, 44, 0.7);
-    --glass-border: rgba(201, 173, 253, 0.15);
+    --glass-bg: rgba(2, 6, 23, 0.8);
+    --glass-border: rgba(96, 165, 250, 0.15);
 
     /* Borders */
-    --border: #2E2C40;
-    --border-hover: #3D3B55;
+    --border: #1E293B;
+    --border-hover: #334155;
 
     /* Gradient */
-    --gradient-hero: linear-gradient(135deg, #2C2647 0%, #4A2535 50%, #3D2A1A 100%);
-    --gradient-accent: linear-gradient(135deg, #C9ADFD, #F9A8D4);
+    --gradient-hero: linear-gradient(135deg, #1E293B 0%, #0F172A 50%, #020617 100%);
+    --gradient-accent: linear-gradient(135deg, #60A5FA, #2563EB);
 
     /* Sparkle */
-    --sparkle-color: #C9ADFD;
+    --sparkle-color: #60A5FA;
 
-    --shadow-color: 250 35% 5%;
+    --shadow-color: 230 40% 2%;
 }

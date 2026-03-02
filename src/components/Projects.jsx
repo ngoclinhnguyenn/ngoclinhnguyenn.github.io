@@ -17,7 +17,7 @@ const PROJECTS = [
             { label: 'Project Vision', url: 'https://drive.google.com/drive/folders/1fHWwf4jKuQadJK7-IBMCKqnkkYiMGDSU?usp=drive_link' }
         ],
         tagColor: 'var(--pastel-sky)',
-        tagText: '#009BE8',
+        tagText: '#0284C7',
     },
     {
         name: 'Diversity Connected',
@@ -30,7 +30,7 @@ const PROJECTS = [
             { label: 'Project Documentation', url: 'https://drive.google.com/drive/folders/1oqYUIUB7IuijL0Q0dVpxbCQGdLXXse2r?usp=drive_link' }
         ],
         tagColor: 'var(--pastel-rose)',
-        tagText: '#B05070',
+        tagText: '#0369A1',
     },
     {
         name: 'Student Success Story Website',
@@ -43,7 +43,7 @@ const PROJECTS = [
             { label: 'Published Website', url: 'https://studentlifeseattle.sites.northeastern.edu/career-development-and-experiential-learning/success-stories/' }
         ],
         tagColor: 'var(--pastel-mint)',
-        tagText: '#2A7A52',
+        tagText: '#065F46',
     },
 ];
 
