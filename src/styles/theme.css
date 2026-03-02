@@ -8,13 +8,13 @@ html[data-theme="light"] {
     --bg-tertiary: #EDE6D9;
     /* Antique White */
 
-    /* Text */
-    --text-primary: #26231E;
-    /* Deep Earth */
-    --text-secondary: #5C5753;
-    /* Muted Bark */
-    --text-tertiary: #948F89;
-    /* Soft Sand */
+    /* Text - Slate (Sync with Cool palette) */
+    --text-primary: #0F172A;
+    /* Slate 900 */
+    --text-secondary: #475569;
+    /* Slate 600 */
+    --text-tertiary: #94A3B8;
+    /* Slate 400 */
 
     /* Accent — Cool Professional Blue (Kept) */
     --accent: #2563EB;
