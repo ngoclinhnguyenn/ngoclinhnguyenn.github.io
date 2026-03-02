@@ -13,8 +13,8 @@ const PROJECTS = [
         image: '/images/snake.png',
         link: 'https://docs.google.com/presentation/d/1O5Vn_f_m8v8eX36IeS2R9yQz8c_H2M9R/edit?usp=sharing&ouid=106727289569614480572&rtpof=true&sd=true',
         detailsLinks: [
-            { label: 'App Prototype', url: 'https://drive.google.com/drive/folders/1IDVk5KP1HLzWUJXnKXAM5FgXsvNLmpTv?usp=sharing' },
-            { label: 'Product Vision', url: 'https://drive.google.com/drive/folders/1fHWwf4jKuQadJK7-IBMCKqnkkYiMGDSU?usp=sharing' }
+            { label: 'App Prototype', url: 'https://drive.google.com/drive/folders/1IDVk5KP1HLzWUJXnKXAM5FgXsvNLmpTv?usp=drive_link' },
+            { label: 'Project Vision', url: 'https://drive.google.com/drive/folders/1fHWwf4jKuQadJK7-IBMCKqnkkYiMGDSU?usp=drive_link' }
         ],
         tagColor: 'var(--pastel-sky)',
         tagText: '#009BE8',
