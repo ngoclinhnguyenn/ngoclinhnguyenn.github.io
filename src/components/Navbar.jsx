@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ThemeToggle } from './ThemeToggle';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { SparkleText } from './ui/SparkleText';
 
 const NAV_LINKS = [
@@ -15,6 +15,13 @@ export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
     const [menuOpen, setMenuOpen] = useState(false);
+
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -155,6 +162,12 @@ export function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            {/* Scroll Progress Bar */}
+            <motion.div
+                className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent via-pastel-rose to-pastel-sky origin-left z-[60]"
+                style={{ scaleX }}
+            />
         </header>
     );
 }

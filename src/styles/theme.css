@@ -1,11 +1,12 @@
 :root,
 html[data-theme="light"] {
     /* Backgrounds - Cream tones */
-    --bg: #FDFBF7;
-    /* warm cream */
-    --bg-secondary: #F8F4EC;
-    /* slightly deeper cream */
-    --bg-tertiary: #F1EBE0;
+    --bg: #FAF7F2;
+    /* Warm Linen */
+    --bg-secondary: #F5F0E8;
+    /* Soft Parchment */
+    --bg-tertiary: #EDE6D9;
+    /* Antique White */
 
     /* Text */
     --text-primary: #26231E;

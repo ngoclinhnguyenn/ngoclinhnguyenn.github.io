@@ -20,18 +20,18 @@ export function SparkleText({ glyph = '✦', size = 'text-lg', delay = 0, classN
     return (
         <motion.span
             aria-hidden="true"
-            className={`inline-block ${size} ${className}`}
+            className={`${size} inline-block select-none`}
             style={{ color: 'var(--sparkle-color)' }}
             animate={{
                 scale: [1, 1.3, 1],
-                opacity: [0.6, 1, 0.6],
-                rotate: [0, 20, 0],
+                rotate: [0, 20, -10, 0],
+                opacity: [0.7, 1, 0.7],
             }}
             transition={{
-                duration: 2.4,
-                delay,
-                ease: 'easeInOut',
+                duration: 2.5,
                 repeat: Infinity,
+                delay: delay,
+                ease: "easeInOut"
             }}
         >
             {glyph}

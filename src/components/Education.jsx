@@ -66,6 +66,7 @@ export function Education() {
                                 className="p-5 md:p-6 flex items-start md:items-center gap-5"
                                 tilt={true}
                                 glow={true}
+                                floating={false}
                                 style={{
                                     borderLeft: `3px solid ${edu.pastelVar}`,
                                     borderRadius: "14px",

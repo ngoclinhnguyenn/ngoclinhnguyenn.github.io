@@ -5,7 +5,7 @@ import { twMerge } from 'tailwind-merge';
 import { clsx } from 'clsx';
 import { useRef, useState } from 'react';
 
-export function Card({ children, className, tilt = true, glow = true, as = 'div', hoverEffect = true }) {
+export function Card({ children, className, tilt = true, glow = true, as = 'div', hoverEffect = true, floating = false }) {
     const Component = motion[as] || motion.div;
     const shouldReduceMotion = useReducedMotion();
     const { ref: tiltRef, tiltStyle, handleMouseMove: handleTiltMove, handleMouseLeave: handleTiltLeave } = useTilt(tilt && !shouldReduceMotion ? 3 : 0);
@@ -32,12 +32,24 @@ export function Card({ children, className, tilt = true, glow = true, as = 'div'
         setIsHovered(true);
     };
 
+    // Bouncy floating animation
+    const floatingAnimation = floating && !shouldReduceMotion ? {
+        y: [0, -8, 0],
+        transition: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: Math.random() * 2 // Randomize start
+        }
+    } : {};
+
     return (
         <Component
             ref={setRefs}
             onMouseMove={onMouseMove}
             onMouseLeave={onMouseLeave}
             onMouseEnter={onMouseEnter}
+            animate={floatingAnimation}
             style={{
                 ...tiltStyle,
             }}

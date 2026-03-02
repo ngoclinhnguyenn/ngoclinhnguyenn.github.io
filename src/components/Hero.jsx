@@ -4,10 +4,21 @@ import { MagneticButton } from './ui/MagneticButton';
 import { GlassCard } from './ui/GlassCard';
 import { SparkleText } from './ui/SparkleText';
 import { Mail, Linkedin, FileText, ArrowUpRight } from 'lucide-react';
+import confetti from 'canvas-confetti';
 
 export function Hero() {
     const containerRef = useRef(null);
     const shouldReduceMotion = useReducedMotion();
+
+    const handleConfetti = (e) => {
+        if (shouldReduceMotion) return;
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 },
+            colors: ['#B48AF5', '#FDC5C5', '#BAE3FD', '#B8F4D4', '#DDD6FE']
+        });
+    };
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -102,6 +113,7 @@ export function Hero() {
                             href="https://docs.google.com/document/d/1vZ02x0VWySrJvV_b7jdkwknSxZpkGIuWmgZ2rtwJbcs/edit?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={handleConfetti}
                             className="px-5 h-11 rounded-pill font-semibold text-sm flex items-center gap-2 text-white transition-all hover:shadow-glow-accent hover:scale-[1.02] active:scale-[0.98] group"
                             style={{ background: 'var(--gradient-accent)' }}
                         >
@@ -114,13 +126,31 @@ export function Hero() {
 
                 {/* ── RIGHT: Visual Column ── */}
                 <motion.div
-                    className="flex-none flex flex-col items-center gap-5 w-full lg:w-auto"
+                    className="flex-none flex flex-col items-center gap-5 w-full lg:w-auto relative"
                     variants={containerVariants}
                     initial="hidden"
                     animate="visible"
                 >
-                    {/* Simplified Profile Image container */}
-                    <motion.div variants={itemRight} className="relative">
+                    {/* Floating Decorative Elements */}
+                    {!shouldReduceMotion && (
+                        <>
+                            <motion.div
+                                className="absolute -top-10 -left-10 w-24 h-24 bg-pastel-lilac/30 rounded-full blur-2xl -z-10"
+                                animate={{ scale: [1, 1.2, 1], x: [0, 20, 0] }}
+                                transition={{ duration: 6, repeat: Infinity }}
+                            />
+                            <motion.div
+                                className="absolute -bottom-10 -right-10 w-32 h-32 bg-pastel-rose/20 rounded-full blur-3xl -z-10"
+                                animate={{ scale: [1, 1.3, 1], y: [0, -30, 0] }}
+                                transition={{ duration: 8, repeat: Infinity }}
+                            />
+                        </>
+                    )}
+
+                    <motion.div
+                        variants={itemRight}
+                        className="relative"
+                    >
                         <div className="relative w-[320px] md:w-[420px] lg:w-[500px] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-border bg-bg-secondary group">
                             <img
                                 src="/images/me.jpg"
@@ -131,29 +161,11 @@ export function Hero() {
                             {/* subtle gradient overlay */}
                             <div className="absolute inset-0 bg-gradient-to-t from-bg/20 to-transparent pointer-events-none" />
                         </div>
+
                     </motion.div>
                 </motion.div>
             </div>
 
-            {/* Scroll hint */}
-            {!shouldReduceMotion && (
-                <motion.div
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-text-tertiary"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.2, duration: 0.6 }}
-                >
-                    <span className="text-xs font-mono tracking-widest uppercase">scroll</span>
-                    <motion.div
-                        animate={{ y: [0, 5, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                    >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M12 5v14M5 12l7 7 7-7" />
-                        </svg>
-                    </motion.div>
-                </motion.div>
-            )}
         </section>
     );
 }

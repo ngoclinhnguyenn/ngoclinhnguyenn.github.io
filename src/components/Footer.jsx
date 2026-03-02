@@ -71,12 +71,9 @@ export function Footer() {
                 </div>
 
                 {/* Sign-off */}
-                <div className="space-y-1 pt-2">
+                <div className="pt-2">
                     <p className="text-sm font-medium text-text-secondary">
                         Linh Nguyen &middot; {new Date().getFullYear()}
-                    </p>
-                    <p className="text-xs text-text-tertiary tracking-wide uppercase font-mono">
-                        Built with care ✦
                     </p>
                 </div>
             </div>

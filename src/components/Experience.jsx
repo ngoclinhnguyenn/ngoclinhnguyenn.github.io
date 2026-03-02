@@ -190,6 +190,7 @@ export function Experience() {
                                     className="p-6 md:p-8 flex flex-col gap-6"
                                     tilt={true}
                                     glow={true}
+                                    floating={false}
                                     style={{
                                         borderTop: `4px solid ${activeExp.pastelVar}`,
                                         borderRadius: "16px",

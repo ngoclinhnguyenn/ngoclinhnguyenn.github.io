@@ -72,7 +72,7 @@ export function About() {
                                 Transforming complex data into intuitive, meaningful digital experiences is what drives me. By combining rigorous analytical skills with visionary project leadership, I strive to create products that not only meet business metrics but genuinely improve the user experience.
                             </p>
                             <p className="italic text-text-tertiary">
-                                When I'm not designing technical solutions or leading teams, you can find me exploring new UX paradigms, mentoring emerging leaders, and analyzing the latest product strategies.
+                                When I’m not designing technical solutions or leading teams, you can find me pushing for a new PR in weight lifting, finding my flow in Pilates & Lagree, or creating lifestyle content where I share my journey and all the little things that inspire me.
                             </p>
                         </div>
 
