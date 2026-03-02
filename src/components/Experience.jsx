@@ -8,7 +8,7 @@ const EXPERIENCES = [
     {
         org: "FPT USA Corp",
         role: "Program Coordinator/ Project Manager",
-        dates: "Sept 2025 – Present",
+        dates: "Sep 2025 – Present",
         logo: "/images/whitefoxlogo.jpg",
         desc: [
             "I led the effort to standardize project management processes for cross-functional teams across the United States, India, and Vietnam. By streamlining how teams communicated and reported progress, I helped accelerate the delivery of two large data analytics transformation programs.",
@@ -164,7 +164,7 @@ export function Experience() {
                                             <h3 className={`font-semibold text-base truncate transition-colors ${isActive ? 'text-text-primary' : 'text-text-secondary group-hover:text-text-primary'}`}>
                                                 {exp.org}
                                             </h3>
-                                            <p className={`text-xs mt-0.5 font-medium transition-colors ${isActive ? 'text-text-secondary' : 'text-text-tertiary'}`}>
+                                            <p className={`text-xs mt-0.5 font-bold transition-colors uppercase tracking-wider ${isActive ? 'text-text-secondary' : 'text-text-tertiary'}`}>
                                                 {exp.dates}
                                             </p>
                                         </div>
@@ -196,11 +196,11 @@ export function Experience() {
                                         borderRadius: "16px",
                                     }}
                                 >
-                                    {/* Role Header */}
-                                    <div>
-                                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
-                                            <h3 className="text-2xl font-bold text-text-primary leading-snug">
-                                                {activeExp.role}
+                                    {/* Company & Role Header */}
+                                    <div className="mb-2">
+                                        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                                            <h3 className="text-3xl md:text-4xl font-display font-black text-text-primary leading-none tracking-tighter uppercase">
+                                                {activeExp.org}
                                             </h3>
                                             {activeExp.featured && (
                                                 <span className="inline-flex items-center gap-1.5 px-3 py-1 pb-1.5 rounded-full text-xs font-semibold bg-accent-soft text-accent shrink-0 border border-accent-soft h-fit">
@@ -209,9 +209,15 @@ export function Experience() {
                                                 </span>
                                             )}
                                         </div>
-                                        <p className="text-base text-text-secondary font-medium">
-                                            <span className="text-text-primary">{activeExp.org}</span> &bull; <span className="font-mono text-sm tracking-wide">{activeExp.dates}</span>
-                                        </p>
+
+                                        <div className="mt-6 mb-4">
+                                            <h4 className="text-xl md:text-2xl font-bold text-accent leading-tight tracking-tight">
+                                                {activeExp.role}
+                                            </h4>
+                                            <p className="text-sm font-mono font-bold text-text-tertiary mt-2 tracking-[0.1em] uppercase">
+                                                {activeExp.dates}
+                                            </p>
+                                        </div>
                                     </div>
 
                                     {/* Description Body */}
